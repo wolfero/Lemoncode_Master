@@ -23,4 +23,4 @@ NOTA: Para este ejercicio se puede utilizar cualquier estructura de Sass que se 
 
 Resultado esperado:
 
-image.png
+![image](https://user-images.githubusercontent.com/64894110/211157255-aa902132-8062-4998-8bd3-606d370f757a.png)
