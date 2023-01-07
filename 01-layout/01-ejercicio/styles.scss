@@ -1,0 +1,133 @@
+$color-1: red;
+$color-2: blue;
+$color-3: green;
+$first-percentage:10%;
+$second-percentage:20%;
+$third-percentage:30%;
+$fourth-percentage:40%;
+
+@mixin myDarken($color, $percentage) {
+    background-color: darken($color, $percentage);
+}
+
+@mixin myLighten($color, $percentage) {
+    background-color: lighten($color, $percentage);
+}
+
+.container-1,
+.container-2,
+.container-3 {
+    display: flex;
+}
+
+.container-1 div,
+.container-2 div,
+.container-3 div {
+    margin: 0.2rem;
+    padding: 2rem 0.5rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.container-1 .base-color {
+    background-color: $color-1;
+}
+
+.container-1 .darken-1 {
+    @include myDarken($color-1, $first-percentage);
+}
+
+.container-1 .darken-2 {
+    @include myDarken($color-1, $second-percentage);
+}
+
+.container-1 .darken-3 {
+    @include myDarken($color-1, $third-percentage);
+}
+
+.container-1 .darken-4 {
+    @include myDarken($color-1, $fourth-percentage);
+}
+
+.container-1 .lighten-1 {
+    @include myLighten($color-1, $first-percentage);
+}
+.container-1 .lighten-2 {
+    @include myLighten($color-1, $second-percentage);
+}
+.container-1 .lighten-3 {
+    @include myLighten($color-1, $third-percentage);
+}
+
+.container-1 .lighten-4 {
+    @include myLighten($color-1, $fourth-percentage);
+}
+
+
+.container-2 .base-color {
+    background-color: $color-2;
+}
+
+.container-2 .darken-1 {
+    @include myDarken($color-2, $first-percentage);
+}
+
+.container-2 .darken-2 {
+    @include myDarken($color-2, $second-percentage);
+}
+
+.container-2 .darken-3 {
+    @include myDarken($color-2, $third-percentage);
+}
+
+.container-2 .darken-4 {
+    @include myDarken($color-2, $fourth-percentage);
+}
+
+.container-2 .lighten-1 {
+    @include myLighten($color-2, $first-percentage);
+}
+.container-2 .lighten-2 {
+    @include myLighten($color-2, $second-percentage);
+}
+.container-2 .lighten-3 {
+    @include myLighten($color-2, $third-percentage);
+}
+
+.container-2 .lighten-4 {
+    @include myLighten($color-2, $fourth-percentage);
+}
+
+.container-3 .base-color {
+    background-color: $color-3;
+}
+
+.container-3 .darken-1 {
+    @include myDarken($color-3, $first-percentage);
+}
+
+.container-3 .darken-2 {
+    @include myDarken($color-3, $second-percentage);
+}
+
+.container-3 .darken-3 {
+    @include myDarken($color-3, $third-percentage);
+}
+
+.container-3 .darken-4 {
+    @include myDarken($color-3, $fourth-percentage);
+}
+
+.container-3 .lighten-1 {
+    @include myLighten($color-3, $first-percentage);
+}
+.container-3 .lighten-2 {
+    @include myLighten($color-3, $second-percentage);
+}
+.container-3 .lighten-3 {
+    @include myLighten($color-3, $third-percentage);
+}
+
+.container-3 .lighten-4 {
+    @include myLighten($color-3, $fourth-percentage);
+}
