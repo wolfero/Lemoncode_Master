@@ -10,5 +10,12 @@
 
 
 ## Ejecutar parcel
-    parcel + ruta relativa del html
+
+- si abrimos la terminal en la raiz de la carpeta
+
+        parcel (ruta relativa del html)
+
+- si la abrimos en la carpeta del ejercicio
+
+        parcel index.html
 
