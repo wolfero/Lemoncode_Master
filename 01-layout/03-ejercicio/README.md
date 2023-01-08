@@ -6,3 +6,4 @@ La barra de navegación responde a distintas resoluciones. Utilizar media querie
 
 Resultado resoluciones mayores:
 
+![image](https://user-images.githubusercontent.com/64894110/211193672-2d33feb8-1f54-4c88-af80-625c5c821969.png)
