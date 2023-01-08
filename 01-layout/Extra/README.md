@@ -1,6 +1,6 @@
 ## Este laboratorio es EXTRA, y por tanto opcional, pero nuestro consejo es que los cubras todos.
 
--
+![image](https://user-images.githubusercontent.com/64894110/211198120-11fca21e-ec0c-4156-b552-8e473e416d9a.png)
 
 Aquí tienes el enunciado:
 
