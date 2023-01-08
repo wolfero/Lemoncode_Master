@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #efedeb;
+}
+
+.card {
+    width: 15rem;
+    display: grid;
+    grid-template-areas:
+        'img'
+        'content';
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    border: #d2d2d2 1px solid;
+}
+
+.cardImg {
+    grid-area: img;
+    background-image: url('boat.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cardContent {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        'title'
+        'text'
+        'time'
+        'info';
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.cardContent .title {
+    grid-area: title;
+    font-weight: lighter;
+}
+
+.cardContent .text {
+    margin: 0;
+    grid-area: text;
+    font-weight: lighter;
+}
+
+.cardContent .published {
+    text-align: end;
+    grid-area: time;
+    font-weight: lighter;
+}
+
+.cardContent .published .date {
+    color: #76b048;
+}
+
+.cardContent .info {
+    grid-area: info;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-weight: lighter;
+    background-color: #76b048;
+}
