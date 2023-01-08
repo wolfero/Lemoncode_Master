@@ -1,0 +1,162 @@
+$primaryColor: #cddf1b;
+$secondaryColor: #f9fbe4;
+$thirdColor: #393e06;
+$mainColor: #f1f1f1;
+
+header {
+    .toolbar {
+        display: none;
+    }
+
+    .page-title {
+        color: white;
+        background-color: $primaryColor;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+}
+
+.page-container {
+    nav {
+        background-color: $thirdColor;
+        position: sticky;
+        top: 0px;
+
+        .menu-container {
+            .menu-title {
+                display: none;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0.5rem;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+
+                li {
+                    width: 5rem;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    text-align: center;
+                    border: #d2d2d2 1px solid;
+                    background-color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    main {
+        padding: 1rem;
+        background-color: $mainColor;
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+
+            .card.item {
+                cursor: pointer;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: white;
+
+                img {
+                    border-radius: 5rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 1rem;
+    background-color: $secondaryColor;
+}
+
+@media (min-width: 425px) {
+    .page-container {
+        nav {
+            .menu-container {
+                ul {
+                    li {
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 786px) {
+    header {
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .page-container {
+        display: flex;
+
+        nav {
+            background-color: $thirdColor;
+
+            .menu-container {
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .menu-title {
+                    display: block;
+                    color: white;
+                    padding: 0.5rem 2rem;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                ul {
+                    padding: 0;
+                    flex-direction: column;
+                    gap: 0;
+
+                    li {
+                        padding: 1rem;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        main {
+            background-color: $mainColor;
+
+            .list {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .card.item{
+                    padding: 1rem;
+                    margin: 0.5rem 1rem;
+                    width: 10rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    border: black 1px solid;
+                    background-color: white;
+
+                    .member-name {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
