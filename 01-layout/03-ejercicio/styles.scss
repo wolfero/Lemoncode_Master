@@ -1,0 +1,30 @@
+.navBar {
+    color: white;
+    background-color: #00617b;
+    display: flex;
+    justify-content: space-between;
+
+    section {
+        padding: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #2d4658;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 1rem 10rem 1rem;
+        border: black 0.5rem solid;
+
+        .navBar {
+            flex-direction: column;
+
+            section {
+                text-align: center;
+            }
+        }
+    }
+}
