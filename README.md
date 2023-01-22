@@ -11,7 +11,7 @@
 
 ## Ejecutar parcel
 
-- si abrimos la terminal en la raiz de la carpeta
+- si abrimos la terminal en la raíz de la carpeta
 
         parcel (ruta relativa del html)
 
