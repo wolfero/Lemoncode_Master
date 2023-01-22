@@ -7,7 +7,7 @@ const concat = (a: number[], b: number[]) => {
 const arrayA = [1, 2];
 const arrayB = [3, 4];
 const result = concat(arrayA, arrayB);
-console.log(result);
+console.log(result); // expected -> [1,2,3,4]
 
 //OPTIONAL CONCAT
 const optionalConcat = (...arg: number[][]) => {
@@ -25,4 +25,4 @@ const optionalResult = optionalConcat(
     optionalArrayC,
     optionalArrayD
 );
-console.log(optionalResult);
+console.log(optionalResult); // expected -> [1,2,3,4,5,6,7,8]
