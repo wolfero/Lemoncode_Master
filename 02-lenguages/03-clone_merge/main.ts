@@ -9,7 +9,7 @@ function clone(source: Pajaro) {
 
 const pato: Pajaro = { volar: true };
 const aguila = clone(pato);
-console.log(aguila); //expected {volar:true}
+console.log(aguila); //expected -> {volar:true}
 
 //MERGE
 interface Person {
@@ -28,4 +28,4 @@ function merge(source: Person, target: Person) {
 }
 
 const result = merge(source, target);
-console.log(result); //expected {name: "Maria", age: 31, married: true, surname: "Ibañez", country: "SPA"}
+console.log(result); //expected -> {name: "Maria", age: 31, married: true, surname: "Ibañez", country: "SPA"}
