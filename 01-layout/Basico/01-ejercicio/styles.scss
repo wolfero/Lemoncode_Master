@@ -1,10 +1,10 @@
 $color-1: red;
 $color-2: blue;
 $color-3: green;
-$first-percentage:10%;
-$second-percentage:20%;
-$third-percentage:30%;
-$fourth-percentage:40%;
+$first-percentage: 10%;
+$second-percentage: 20%;
+$third-percentage: 30%;
+$fourth-percentage: 40%;
 
 @mixin myDarken($color, $percentage) {
     background-color: darken($color, $percentage);
@@ -25,8 +25,16 @@ $fourth-percentage:40%;
 .container-3 div {
     margin: 0.2rem;
     padding: 2rem 0.5rem;
-    color: white;
     border-radius: 0.5rem;
+}
+
+.base-color,
+.darken-1,
+.darken-2,
+.darken-3,
+.darken-4,
+.lighten-1 {
+    color: white;
 }
 
 .container-1 .base-color {
@@ -62,7 +70,6 @@ $fourth-percentage:40%;
 .container-1 .lighten-4 {
     @include myLighten($color-1, $fourth-percentage);
 }
-
 
 .container-2 .base-color {
     background-color: $color-2;
