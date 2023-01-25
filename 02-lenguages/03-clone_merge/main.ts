@@ -3,8 +3,8 @@ interface Pajaro {
     volar: boolean;
 }
 
-function clone(source: Pajaro) {
-    return Object.assign({}, source);
+function clone(source: Pajaro | Person) {
+    return { ...source };
 }
 
 const pato: Pajaro = { volar: true };
@@ -24,7 +24,7 @@ const source: Person = { name: 'Maria', surname: 'Ibañez', country: 'SPA' };
 const target: Person = { name: 'Luisa', age: 31, married: true };
 
 function merge(source: Person, target: Person) {
-    return Object.assign(target, source);
+    return Object.assign(clone(target), source);
 }
 
 const result = merge(source, target);
