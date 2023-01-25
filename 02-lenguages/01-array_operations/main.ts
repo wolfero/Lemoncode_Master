@@ -1,8 +1,7 @@
 const myArray = [1, 2, 3, 4];
 // HEAD FUNCTION
 const head = (array: number[]) => {
-    const newArray = [...array];
-    const [firstItem] = newArray;
+    const [firstItem] = array;
     return firstItem;
 };
 
@@ -11,8 +10,7 @@ console.log(firstItem);
 
 //TAIL FUNCTION
 const tail = (array: number[]) => {
-    const newArray = [...array];
-    const [firstItem, ...rest] = newArray;
+    const [firstItem, ...rest] = array;
     return rest;
 };
 
@@ -21,8 +19,7 @@ console.log(tailArray);
 
 //INIT FUNCTION
 const init = (array: number[]) => {
-    const newArray = [...array];
-    return newArray.splice(0, newArray.length - 1);
+    return array.slice(0,-1,);
 };
 
 const InitArray = init(myArray);
@@ -30,8 +27,7 @@ console.log(InitArray);
 
 //LAST FUNCTION
 const last = (array: number[]) => {
-    const newArray = [...array];
-    return newArray.pop();
+    return array[array.length - 1];
 };
 
 const lastArray = last(myArray);
