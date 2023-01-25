@@ -4,11 +4,10 @@ interface Book {
 }
 
 function isBookRead(books: Book[], titleToSearch: string) {
-    const isRead = true;
     const book = books.find((book) => book.title === titleToSearch);
     if (!book) return false;
 
-    return book.isRead ? isRead : !isRead;
+    return book.isRead;
 }
 
 const books: Book[] = [
