@@ -25,5 +25,14 @@ describe('confirmation dialog component should', () => {
 
     expect(title && content).toBeInTheDocument();
   });
+  
+  it('call onClose when the close button is clicked', () => {
+    const { getByText } = render(<ConfirmationDialogComponent {...props} />);
+
+    fireEvent.click(getByText('Close'));
+
+    expect(onClose).toHaveBeenCalled();
+  });
+
 
 });
