@@ -9,25 +9,18 @@ describe('useConfirmationDialog hook should', () => {
     const { result } = renderHook(() => useConfirmationDialog());
 
     expect(result.current.isOpen).toBe(false);
-    act(() => {
-      result.current.onOpenDialog(mockedLookup);
-    });
+    act(() => result.current.onOpenDialog(mockedLookup));
 
     expect(result.current.isOpen).toBe(true);
     expect(result.current.itemToDelete).toEqual(mockedLookup);
   });
-  
+
   it('handle closing the dialog', () => {
     const { result } = renderHook(() => useConfirmationDialog());
 
-    act(() => {
-      result.current.onOpenDialog(mockedLookup);
-    });
+    act(() => result.current.onOpenDialog(mockedLookup));
     expect(result.current.isOpen).toBe(true);
-
-    act(() => {
-      result.current.onClose();
-    });
+    act(() => result.current.onClose());
 
     expect(result.current.isOpen).toBe(false);
   });
