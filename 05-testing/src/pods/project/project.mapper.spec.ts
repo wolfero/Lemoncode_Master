@@ -31,5 +31,17 @@ describe('Project mapper should', () => {
 
     expect(result).toEqual(expectedProject);
   });
+  
+  it('return an empty project for null input', () => {
+    const result = mapProjectFromApiToVm(null);
 
+    expect(result).toEqual({
+      id: '',
+      name: '',
+      externalId: '',
+      comments: '',
+      isActive: false,
+      employees: [],
+    });
+  });
 });
