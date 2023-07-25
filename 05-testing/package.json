@@ -14,7 +14,8 @@
     "clean": "rimraf dist",
 
     "test": "jest -c ./config/test/jest.js",
-    "test:watch": "npm run test -- --watchAll -i"
+    "test:watch": "npm run test -- --watch -i",
+    "test:watchAll": "npm run test -- --watchAll -i"
   },
   "repository": {
     "type": "git",
