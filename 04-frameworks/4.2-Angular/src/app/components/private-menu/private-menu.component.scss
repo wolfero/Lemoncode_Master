@@ -1,0 +1,26 @@
+nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0 4rem;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(236, 83, 83);
+                border-radius: 1rem;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+    }
+}

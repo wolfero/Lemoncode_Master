@@ -1,0 +1,21 @@
+<div class="my-header">
+    <app-public-header *ngIf="!isLoggedIn()">
+        <app-logo mat-button (click)="sidenav.toggle()" />
+    </app-public-header>
+    <app-private-header *ngIf="isLoggedIn()">
+        <app-logo mat-button (click)="sidenav.toggle()" />
+    </app-private-header>
+</div>
+<mat-sidenav-container hasBackdrop="true">
+    <mat-sidenav-content>
+        <router-outlet />
+    </mat-sidenav-content>
+    <mat-sidenav #sidenav mode="over" position="end" [(opened)]="opened" (opened)="events.push('open!')"
+        (closed)="events.push('close!')">
+        <app-public-menu *ngIf="!isLoggedIn()" />
+        <app-private-menu *ngIf="isLoggedIn()"/>
+    </mat-sidenav>
+</mat-sidenav-container>
+<footer>
+    <app-footer />
+</footer>
