@@ -20,6 +20,10 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
   const handleBack = () => {
     navigate(linkRoutes.characterCollection);
   };
+  const handleSaveBestSentences = async (bestSentences: string) => {
+    const apiCharacter = await api.saveBestSentence(id, bestSentences);
+    setCharacter(mapCharacterFromApiToVm(apiCharacter));
+  };
 
   React.useEffect(() => {
     if (id) {
@@ -27,5 +31,11 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     }
   }, []);
 
-  return <CharacterComponent character={character} onBack={handleBack} />;
+  return (
+    <CharacterComponent
+      character={character}
+      onBack={handleBack}
+      onSave={handleSaveBestSentences}
+    />
+  );
 };

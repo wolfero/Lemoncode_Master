@@ -1,5 +1,5 @@
 export interface Character {
-  id: number;
+  id: string;
   name: string;
   status: string,
   species: string,
@@ -16,5 +16,6 @@ export interface Character {
   image: string,
   episode: string[],
   url: string,
-  created: string
+  created: string,
+  bestSentences: string
 }

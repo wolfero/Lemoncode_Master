@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Character } from './character.vm';
 import {
   Card,
@@ -8,51 +8,77 @@ import {
   Typography,
   CardActions,
   IconButton,
+  TextField,
+  Button,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface Props {
   character: Character;
   onBack: () => void;
+  onSave: (bestSentences: string) => void;
 }
 
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
-  const { character, onBack } = props;
+  const { character, onBack, onSave } = props;
+  const {
+    id,
+    name,
+    species,
+    image,
+    status,
+    gender,
+    origin,
+    location,
+    created,
+  } = character;
+  const [bestSentences, setBestSentences] = useState('');
 
   return (
     <Card>
-      <CardHeader title={character.name} subheader={character.species} />
+      <CardHeader title={name} subheader={species} />
       <CardContent>
         <CardMedia
-          image={character.image}
-          title={character.name}
+          image={image}
+          title={name}
           style={{ height: 0, paddingTop: '56.25%' }}
         />
         <Typography variant="body1">
-          <p>
+          <div>
             <b>Status: </b>
-            {character.status}
-          </p>
-          <p>
+            {status}
+          </div>
+          <div>
             <b>Gender: </b>
-            {character.gender}
-          </p>
-          <p>
+            {gender}
+          </div>
+          <div>
             <b>Origin: </b>
-            {character.origin.name}
-          </p>
-          <p>
+            {origin.name}
+          </div>
+          <div>
             <b>Location: </b>
-            {character.location.name}
-          </p>
-          <p>
+            {location.name}
+          </div>
+          <div>
             <b>Created: </b>
-            {character.created}
-          </p>
+            {created}
+          </div>
+          <div>
+            <b>Best Sentence: </b>
+            {character.bestSentences}
+          </div>
         </Typography>
+        <TextField
+          label="Best Sentences"
+          value={bestSentences}
+          fullWidth
+          onChange={(e) => setBestSentences(e.target.value)}
+        />
+        <Button onClick={() => onSave(bestSentences)}>Save sentence</Button>
       </CardContent>
       <CardActions>
-        <IconButton onClick={() => onBack()}>
+        <IconButton onClick={onBack}>
           <ArrowBackIcon />
         </IconButton>
       </CardActions>
